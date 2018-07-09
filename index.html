@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCeV99bIC37WilxayF28rfCLTYYJjwuQ14",
+            authDomain: "ark-train-project.firebaseapp.com",
+            databaseURL: "https://ark-train-project.firebaseio.com",
+            projectId: "ark-train-project",
+            storageBucket: "",
+            messagingSenderId: "942041872533"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="game.js"></script>
+</head>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Trains Keep On Slippin, Slippin</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+            <div class="panel-body">
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Mins Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "targetDiv">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+            <div class="panel-body">
+                <!-- Table -->
+                <form>
+                    <div class="form-group">
+                        <label for="InputTrain1">Train name</label>
+                        <input type="Train" class="form-control" id="InputTrain1" aria-describedby="TrainHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputDestination1">Destination</label>
+                        <input type="Destination" class="form-control" id="InputDestination1">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputTrainTime">Train Time (00:00)</label>
+                        <input type="TrainTime" class="form-control" id="InputTrainTime1">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputFrequency1">Frequency (min)</label>
+                        <input type="Frequency" class="form-control" id="InputFrequency1">
+                    </div>
+                    <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>
